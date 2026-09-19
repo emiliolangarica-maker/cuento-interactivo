@@ -1,0 +1,105 @@
+:root {
+  --bg-1: #0f172a;
+  --bg-2: #1d4ed8;
+  --card-bg: rgba(15, 23, 42, 0.7);
+  --text: #e2e8f0;
+  --accent: #a1a0bd;
+  --button-bg: #9c9eb9;
+  --button-text: #111827;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: var(--text);
+}
+
+.story-screen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #000;
+  transition: background 0.5s ease;
+}
+
+.story-card {
+  width: min(90vw, 700px);
+  background: var(--card-bg);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.scene-tag {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(251, 191, 36, 0.05);
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 18px;
+}
+
+#story-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 24px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.10);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/*
+Explicación del CSS:
+- :root define variables reutilizables para colores y estilos.
+- * aplica box-sizing a todos los elementos y resetea márgenes y padding.
+- body centra el contenido vertical y horizontalmente y establece la tipografía base.
+- .story-screen ocupa toda la pantalla y crea una capa de fondo con degradado.
+- .story-card da formato al recuadro central del cuento.
+- .scene-tag estiliza la etiqueta de la escena.
+- h1 define la apariencia del título.
+- #story-text trae estilo a la narración, con espacio entre líneas.
+- button crea el diseño del botón principal.
+- button:hover cambia la apariencia al pasar el mouse por encima.
+- button:active da feedback al hacer clic.
+*/
